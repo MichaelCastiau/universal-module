@@ -13,14 +13,3 @@
 #include "AnimationSequence.h"
 #include "AnimationFrame.h"
 #include "ports.h"
-#include "gpio_configuration.cpp"
-
-/**
- * Initializes the use of this library
- * by setting the correct GPIO pins configuration.
- * Call this method after initializing the clock and general
- * settings in your embedded system code.
- */
-void initializeModule(void) {
-	initializeGPIOPins();
-}

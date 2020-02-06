@@ -21,18 +21,29 @@ Output/channel: 12-18V max. current: (500mA / #Used channels) and max. 250mA
 
 ## Usage
 
-Before using this library, initialize it. Initializing the module will set the needed configuration to GPIO pins for correct mapping of the output channels.
-Aditionally, the 6 output channels will be created and are available for use in your application.
+### Hardware Initialization
 
-```c++
-#include <UniversalModule.cpp>
+Before using the library, initialize following pins as GPIO outputs (push-pull):
 
-initializeUniversalModule();
+- PA8
+- PA9
+- PA10
+- PA11
+- PB14
+- PB15
 
-channel1.turnOn();
+Additionally, a timer may be required to call the `tick()` method periodically. It is advised to use the timer in Interrupt or DMA mode:
 
-#define BATHROOM channel2;
-BATHROOM.turnOff();
+```c++ main.cpp
+HAL_TIM_Base_Start_IT(/*timer reference*/);
+
+void TIM14_IRQHandler(void) {
+    HAL_TIM_IRQHandler(&htim14);
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
+    sequence.tick();    //You need to periodically call this method
+}
 ```
 
 ### Channels
