@@ -20,6 +20,7 @@ public:
 
 	void turnOn();
 	void turnOff();
+	void toggle();
 };
 
 #endif /* MODELS_OUTPUTCHANNEL_H_ */

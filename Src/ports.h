@@ -28,12 +28,12 @@
 #define CHANNEL_6_PORT GPIOA
 #define CHANNEL_6_PIN  GPIO_PIN_11
 
-OutputChannel channel1(CHANNEL_1_PORT, CHANNEL_1_PIN);
-OutputChannel channel2(CHANNEL_2_PORT, CHANNEL_2_PIN);
-OutputChannel channel3(CHANNEL_3_PORT, CHANNEL_3_PIN);
-OutputChannel channel4(CHANNEL_4_PORT, CHANNEL_4_PIN);
-OutputChannel channel5(CHANNEL_5_PORT, CHANNEL_5_PIN);
-OutputChannel channel6(CHANNEL_6_PORT, CHANNEL_6_PIN);
+extern OutputChannel channel1(CHANNEL_1_PORT, CHANNEL_1_PIN);
+extern OutputChannel channel2(CHANNEL_2_PORT, CHANNEL_2_PIN);
+extern OutputChannel channel3(CHANNEL_3_PORT, CHANNEL_3_PIN);
+extern OutputChannel channel4(CHANNEL_4_PORT, CHANNEL_4_PIN);
+extern OutputChannel channel5(CHANNEL_5_PORT, CHANNEL_5_PIN);
+extern OutputChannel channel6(CHANNEL_6_PORT, CHANNEL_6_PIN);
 
 #define CHANNEL1 channel1
 #define CHANNEL2 channel2

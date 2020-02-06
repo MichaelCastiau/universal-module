@@ -17,6 +17,10 @@ OutputChannel::~OutputChannel() {
 	// TODO Auto-generated destructor stub
 }
 
+void OutputChannel::toggle() {
+	HAL_GPIO_TogglePin(this->port, this->pin);
+}
+
 void OutputChannel::turnOn() {
 	HAL_GPIO_WritePin(this->port, this->pin, GPIO_PIN_SET);
 }
