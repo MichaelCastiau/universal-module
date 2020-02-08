@@ -21,7 +21,7 @@ public:
 	AnimationFrame(callback *fnc);
 	virtual ~AnimationFrame();
 
-	void play();
+	void play(void);
 };
 
 #endif /* MODELS_ANIMATIONFRAME_H_ */
